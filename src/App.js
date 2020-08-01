@@ -6,7 +6,7 @@ import ImagePreview from "./components/modal/ImagePreview";
 import Images from "./components/Images/Images";
 
 function App() {
-  const [setSelectedImg, setSetSelectedImg] = useState(null);
+  const [setSelectedImg, setSetSelectedImg] = useState(null); //set single image url for modal view
   return (
     <div className="App">
       <Header />

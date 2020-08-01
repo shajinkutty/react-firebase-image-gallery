@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { storage, db, timeStamp } from "../firebase/config";
 
 const useStorage = (file) => {
-  const [progress, setProgress] = useState(0);
-  const [error, setError] = useState(null);
-  const [url, setUrl] = useState(null);
+  const [progress, setProgress] = useState(0); //uploading percentage
+  const [error, setError] = useState(null); //error
+  const [url, setUrl] = useState(null); //current file url
 
   useEffect(() => {
     const storageRef = storage.ref(file.name);

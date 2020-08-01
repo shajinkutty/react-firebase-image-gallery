@@ -4,6 +4,7 @@ import { db } from "../firebase/config";
 const useFirestore = (collection) => {
   const [docs, setDocs] = useState([]);
 
+  // get all documents from image collection with id
   useEffect(() => {
     const unsub = db
       .collection(collection)
@@ -15,7 +16,8 @@ const useFirestore = (collection) => {
         });
         setDocs(documents);
       });
-    return () => unsub();
+
+    return () => unsub(); //cleanup function
   }, [collection]);
   return { docs };
 };
