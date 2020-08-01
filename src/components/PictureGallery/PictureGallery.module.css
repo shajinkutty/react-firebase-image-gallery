@@ -24,18 +24,9 @@
   display: inline-block;
   cursor: pointer;
   margin-right: 1rem;
+  border-radius: 3px;
 }
 
 .Inputfile:focus + label,
 .Inputfile + label:hover {
-  background-color: rgb(185, 79, 79);
-}
-.ImageGrid {
-  margin: 1rem 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1rem;
-}
-.Image {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
 }

@@ -3,13 +3,13 @@ import "firebase/storage";
 import "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyANSFZyOuqFKUo2DcINeBPRcJzGx6Tr5oo",
-  authDomain: "firegram-fb1d5.firebaseapp.com",
-  databaseURL: "https://firegram-fb1d5.firebaseio.com",
-  projectId: "firegram-fb1d5",
-  storageBucket: "firegram-fb1d5.appspot.com",
-  messagingSenderId: "60420846194",
-  appId: "1:60420846194:web:f0b82a0a2c945a029148eb",
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMIN",
+  databaseURL: "XXXXXX",
+  projectId: "XXXXX",
+  storageBucket: "XXXXXX",
+  messagingSenderId: "XXXXXX",
+  appId: "XXXXXXXXXXXXXXXXX",
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);

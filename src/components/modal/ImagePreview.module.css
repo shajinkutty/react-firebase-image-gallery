@@ -1,0 +1,23 @@
+.BackDrop {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+.Modal {
+  position: relative;
+  width: 60%;
+  height: 300px;
+  margin: 0 auto;
+}
+img {
+  width: 100%;
+  margin-top: 2rem;
+  border: 5px solid #fff;
+  border-radius: 5px;
+}

@@ -1,0 +1,17 @@
+.Header {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  width: 100%;
+}
+.Svg {
+  width: 20px;
+  overflow: visible;
+  stroke: rgb(212, 52, 52);
+  stroke-width: 4;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.Title {
+  margin: 0;
+}

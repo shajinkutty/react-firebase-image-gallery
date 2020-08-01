@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import classes from "./PictureGallery.module.css";
 import ProgressBar from "../UI/ProgressBar";
+import { motion } from "framer-motion";
 
 const PictureGallery = () => {
   const [file, setFile] = useState(null);
@@ -23,7 +24,9 @@ const PictureGallery = () => {
   return (
     <div>
       <div className={classes.Container}>
-        <h2>Your Gallery</h2>
+        <motion.h2 initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          Your Gallery
+        </motion.h2>
         <div className={classes.Control}>
           <input
             type="file"
@@ -32,21 +35,17 @@ const PictureGallery = () => {
             className={classes.Inputfile}
             onChange={handleChangeFile}
           />
-          <label htmlFor="file">Choose a file</label>
-          {file && <p>File Name</p>}
+          <motion.label
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            htmlFor="file"
+          >
+            Choose a file
+          </motion.label>
+          {file && <p>{file.name}</p>}
         </div>
         {file && <ProgressBar file={file} setFile={setFile} />}
         {error && <p>{error}</p>}
-        <div className={classes.ImageGrid}>
-          <div className={classes.Image}>
-            image 1
-            <img src="" alt="" />
-          </div>
-          <div className={classes.Image}>
-            Image 2
-            <img src="" alt="" />
-          </div>
-        </div>
       </div>
     </div>
   );
