@@ -7,6 +7,7 @@
 .Control {
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 .Inputfile {
   width: 0.1px;
@@ -28,13 +29,6 @@
 .Inputfile:focus + label,
 .Inputfile + label:hover {
   background-color: rgb(185, 79, 79);
-}
-.Progress {
-  margin: 1rem 0;
-  height: 5px;
-  width: 100%;
-  background-color: rgb(218, 92, 92);
-  border-radius: 5px;
 }
 .ImageGrid {
   margin: 1rem 0;

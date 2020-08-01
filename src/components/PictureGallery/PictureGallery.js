@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./PictureGallery.module.css";
+import ProgressBar from "../UI/ProgressBar";
 
 const PictureGallery = () => {
+  const [file, setFile] = useState(null);
+  const [error, setError] = useState(null);
+  // File change event
+  const handleChangeFile = (e) => {
+    const currentFile = e.target.files[0]; //get first file
+    const imageTypes = ["image/jpeg", "image/jpg", "image/png"]; //Allowed Image types
+
+    // check if image type match the allowed types
+    if (imageTypes.includes(currentFile.type)) {
+      setFile(currentFile);
+      setError(null);
+    } else {
+      setError("Invalid Image Type");
+      setFile(null);
+    }
+  };
+
   return (
     <div>
       <div className={classes.Container}>
@@ -12,11 +30,13 @@ const PictureGallery = () => {
             name="file"
             id="file"
             className={classes.Inputfile}
+            onChange={handleChangeFile}
           />
-          <label for="file">Choose a file</label>
-          <p>File Name</p>
+          <label htmlFor="file">Choose a file</label>
+          {file && <p>File Name</p>}
         </div>
-        <div className={classes.Progress}></div>
+        {file && <ProgressBar file={file} setFile={setFile} />}
+        {error && <p>{error}</p>}
         <div className={classes.ImageGrid}>
           <div className={classes.Image}>
             image 1

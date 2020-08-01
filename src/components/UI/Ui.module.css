@@ -1,0 +1,7 @@
+.Progress {
+  margin: 1rem 0;
+  height: 5px;
+  background-color: rgb(218, 92, 92);
+  border-radius: 5px;
+  align-self: flex-start;
+}
