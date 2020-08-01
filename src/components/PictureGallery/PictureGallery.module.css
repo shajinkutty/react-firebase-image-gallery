@@ -1,0 +1,47 @@
+.Container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Control {
+  display: flex;
+  align-items: center;
+}
+.Inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.Inputfile + label {
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: rgb(218, 92, 92);
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.Inputfile:focus + label,
+.Inputfile + label:hover {
+  background-color: rgb(185, 79, 79);
+}
+.Progress {
+  margin: 1rem 0;
+  height: 5px;
+  width: 100%;
+  background-color: rgb(218, 92, 92);
+  border-radius: 5px;
+}
+.ImageGrid {
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+.Image {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+}
